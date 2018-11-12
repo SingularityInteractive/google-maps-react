@@ -88,6 +88,7 @@ export class Marker extends React.Component {
     });
 
     this.markerPromise.resolve(this.marker);
+    if (this.props.onReady) this.props.onReady(this.marker)
   }
 
   getMarker() {
