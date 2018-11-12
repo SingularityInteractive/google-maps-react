@@ -189,6 +189,7 @@
         });
 
         this.markerPromise.resolve(this.marker);
+        if (this.props.onReady) this.props.onReady(this.marker)
       }
     }, {
       key: 'getMarker',
