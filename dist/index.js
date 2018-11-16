@@ -347,6 +347,7 @@
 
         return _react2.default.Children.map(children, function (c) {
           if (!c) return;
+          if (_react2.default.isValidElement(c) && typeof c.type === 'string') return c;
           return _react2.default.cloneElement(c, {
             map: _this6.map,
             google: _this6.props.google,
