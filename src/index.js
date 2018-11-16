@@ -236,6 +236,7 @@ export class Map extends React.Component {
 
     return React.Children.map(children, c => {
       if (!c) return;
+      if (React.isValidElement(c) && typeof c.type === 'string') return c;
       return React.cloneElement(c, {
         map: this.map,
         google: this.props.google,
